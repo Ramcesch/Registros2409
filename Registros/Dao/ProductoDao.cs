@@ -8,16 +8,16 @@ namespace Registros.Dao
     {
         private static int TAM = 5;
         const int TAMAÑO = 10;
-        private Producto[] carrito= new Producto[TAM];
+        private Producto[] carrito = new Producto[TAM];
         private int pos = 0;
-        
+
         public void Agregar(Producto prod)
         {
             if (pos < TAM)
             {
                 carrito[pos++] = prod;
             }
-            else Console.WriteLine("No se ppuede Agregar mas Productos")           
+            else Console.WriteLine("No se ppuede Agregar mas Productos");
 
         }
 
@@ -25,5 +25,6 @@ namespace Registros.Dao
         {
             return carrito;
         }
+
     }
 }
