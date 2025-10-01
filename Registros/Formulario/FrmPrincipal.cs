@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Registros.Formulario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,13 @@ namespace Registros
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             lblFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
+
+        private void edadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormArreglo frm = new FormArreglo();
+            frm.ShowDialog();
+
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Registros.Dao;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,22 @@ namespace Registros.Formulario
 
         private void FormArreglo_Load(object sender, EventArgs e)
         {
-
+            mostrarEdades();
         }
-    }
+
+        private void tbEdad_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                EdadDao.edades[EdadDao.pos++]=int.Parse(tbEdad.Text);
+            }
+        }
+        public void mostrarEdades()
+        {
+            lbEdades.DataSource = null;
+            lbEdades.DataSource = EdadDao.edades;
+            lbEdades.Refresh();
+        } 
+    
+    }   
 }

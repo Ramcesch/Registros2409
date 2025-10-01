@@ -65,6 +65,7 @@
             this.tbEdad.Size = new System.Drawing.Size(100, 22);
             this.tbEdad.TabIndex = 1;
             this.tbEdad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbEdad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbEdad_KeyDown);
             // 
             // lbEdades
             // 
