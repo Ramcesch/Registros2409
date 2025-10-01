@@ -46,8 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dao\EdadDao.cs" />
     <Compile Include="Dao\ProductoDao.cs" />
     <Compile Include="Dao\UsuarioDao.cs" />
+    <Compile Include="Formulario\FormArreglo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FormArreglo.Designer.cs">
+      <DependentUpon>FormArreglo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulario\FrmProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +76,9 @@
     <Compile Include="Modelos\Producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formulario\FormArreglo.resx">
+      <DependentUpon>FormArreglo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FrmProducto.resx">
       <DependentUpon>FrmProducto.cs</DependentUpon>
     </EmbeddedResource>
